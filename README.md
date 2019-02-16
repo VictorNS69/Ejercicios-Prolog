@@ -6,7 +6,7 @@ Pequeño árbol genealógico hecho en Prolog.
 ![Árbol Genealógico de ejemplo](/doc/arbol.png)
 
 ## Preguntas que se pueden hacer
-```bash
+```Prolog
 ?- hijo(X, yo).		% ¿'yo' de quién es hijo?
 ?- hermano(X, yo).	% ¿De quién es hermano 'yo'?
 ?- padre(X, yo).	% ¿Quiénes son los padres de 'yo'?
