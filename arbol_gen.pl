@@ -22,7 +22,7 @@ hijo(primo1, sobrino).
 hijo(primo1pareja, sobrino).
 
 % Es X hermano/a de Y
-% TODO: Imprime dos veces por que una persona es
+% Imprime dos veces por que una persona es
 % hermano por parte de madre y de padre
 hermano(X, Y) :-
     hijo(Z, X),
@@ -40,19 +40,19 @@ abuelo(X, Y) :-
     padre(Z, Y).
 
 % X es tio/a de Y
-% TODO: Sale dos veces por que hermano devuelve dos veces
+% Sale dos veces por que hermano devuelve dos veces
 tio(X, Y) :-
     hermano(X, Z),
     padre(Z, Y).
 
 % X es primo de Y
-% TODO: Se repite dos veces
+% Se repite dos veces porque llama a tio
 primo(X,Y) :-
     hijo(Z, X),
     tio(Z,Y).
 
 % X es sobrino de Y
-% TODO: Se repite dos veces
+% Se repite dos veces porque llama a primo
 sobrino(X, Y) :-
     hijo(Z, X),
     primo(Z,Y).
