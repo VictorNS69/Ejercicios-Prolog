@@ -3,7 +3,7 @@ Pequeño árbol genealógico hecho en Prolog.
 
 ## Árbol
 Árbol implementado en la Base de Hechos:
-![Árbol Genealógico de ejemplo](/doc/arbol.png)
+![Árbol Genealógico de ejemplo](/Arbol-Genealogico/arbol.png)
 
 ## Preguntas que se pueden hacer
 ```Prolog
