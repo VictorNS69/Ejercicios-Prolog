@@ -16,6 +16,3 @@ Pequeño árbol genealógico hecho en Prolog.
 ?- sobrino(X, yo).	% ¿Quiénes son los sobrinos de 'yo'?
 ...
 ```
-## Autor
-[Victor Nieves Sánchez](https://twitter.com/VictorNS69)
-
