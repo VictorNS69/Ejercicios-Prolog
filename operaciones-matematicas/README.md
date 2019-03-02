@@ -1,5 +1,5 @@
 # Operaciones matemáticas
-
+Algunas operaciones matemáticas con números naturales.
 ## Numeros naturales
 nat(X)/1 --> Dice si X es un natural o no
 
