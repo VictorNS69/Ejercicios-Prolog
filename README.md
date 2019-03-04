@@ -3,3 +3,6 @@ Repositorio que contiene algunos de los ejercicios propuestos en la asignatura d
 
 # Autor
 [Víctor Nieves Sánchez](https://twitter.com/VictorNS69)
+
+# Licencia
+[Licencia](/LICENSE). 
