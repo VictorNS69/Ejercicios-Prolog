@@ -4,8 +4,8 @@ nat(s(X)) :-
 	nat(X).
 
 % addition(X,Y,Z)/3 --> Z = X+Y
-addition(0,X,X).  			% 0+X=X
-addition(s(X),Y,Z) :-			% (1+X)+Y=X+(Y+1)
+addition(0,X,X).  			% 0+X = X
+addition(s(X),Y,Z) :-			% (1+X)+Y = X+(Y+1)
 	addition(X,s(Y),Z).
 
 % multiply(X,Y,Z)/3 --> Z=X*Y
@@ -20,5 +20,11 @@ fact(s(X),Y) :-             % (X+1)! = X! * (X+1)
 	fact(X,Z),
 	multiply(s(X),Z,Y).
 
+% exp(X,Y,Z) --> Z = X^Y
+exp(X,0,s(0)).						% X^0 = 1
+exp(X,s(Y),Z) :-					% X^(Y+1) = X^(Y)*X
+	exp(X,Y,S),
+	multiply(X,S,Z).
 
-% TODO: exp(X,Y,Z), min(X,Y,Z)
+
+% TODO: min(X,Y,Z)
