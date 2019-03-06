@@ -26,5 +26,14 @@ exp(X,s(Y),Z) :-					% X^(Y+1) = X^(Y)*X
 	exp(X,Y,S),
 	multiply(X,S,Z).
 
+% greater(X,Y) --> X > Y
+greater(X,0) :- X\=0.		% max(X,0) = X
+greater(s(X),s(Y)) :-
+	greater(X,Y).
 
-% TODO: min(X,Y,Z)
+% lower(X,Y) --> X < Y
+	lower(0,X) :- X\=0.		% min(0,X) = X
+	lower(s(X),s(Y)) :-
+		lower(X,Y).
+
+% TODO: min(X,Y,Z) (so greater and lowe needed)

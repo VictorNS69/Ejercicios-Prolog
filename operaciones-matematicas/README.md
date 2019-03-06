@@ -19,7 +19,7 @@ Ejemplos:
 ?- addition(s(0),s(s(0)),s(s(s(0)))).	% ¿1 + 2 = 3?
 ```
 
-# Multiplicación
+## Multiplicación
 multiply(X,Y,Z) --> Dice si Z = X * Y
 
 Ejemplos:
@@ -29,7 +29,7 @@ Ejemplos:
 ?- multiply(s(s(0)),s(s(s(s(0)))),0).           % ¿2 * 4 = 0?
 ```
 
-# Factorial
+## Factorial
 fact(X,Y)/2 --> Dice si Y = X!
 
 Ejemplos:
@@ -38,11 +38,25 @@ Ejemplos:
 ?- fact(s(0),s(s(s(0)))).   % ¿1! = 3?
 ?- fact(s(s(0)),s(s(0))).   % ¿2! = 2?
 ```
-# Exponencial
-exp(X,Y,Z) --> Dice si Z = X^Y
+## Exponencial
+exp(X,Y,Z)/3 --> Dice si Z = X^Y
 Ejemplos:
 ```pl
 ?- exp(s(s(0)),s(s(0)),s(s(s(s(0))))).        % ¿2^2 = 4?
 ?- exp(s(s(0)),s(s(0)),s(s(s(s(s(0)))))).     % ¿2^2 = 5?
+```
 
+## Menor que
+lower(X,Y)/2 --> Dice si X < Y
+Ejemplos:
+```pl
+?- lower(s(0),s(s(0))).     % ¿1 < 2?
+?- lower(s(0),s(0)).        % ¿1 < 1?
+```
+## Mayor que
+greater(X,Y)/2 --> Dice si X > Y
+Ejemplos:
+```pl
+?- greater(s(0),s(s(0))).   % ¿1 > 2?
+?- greater(s(0),0).         % ¿1 > 0?
 ```
