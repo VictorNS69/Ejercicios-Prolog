@@ -20,11 +20,13 @@ fact(s(X),Y) :-             % (X+1)! = X! * (X+1)
 	fact(X,Z),
 	multiply(s(X),Z,Y).
 
+% TODO: Not working
 % exp(X,Y,Z) --> Z = X^Y
-exp(X,0,s(0)).						% X^0 = 1
-exp(X,s(Y),Z) :-					% X^(Y+1) = X^(Y)*X
+exp(_,0,s(0)).						% X^0 = 1
+exp(X,Y,Z) :-					% X^(Y+1) = X^(Y)*X
 	exp(X,Y,S),
 	multiply(X,S,Z).
+
 
 % greater(X,Y) --> X > Y
 greater(X,0) :- X\=0.		% max(X,0) = X
@@ -32,8 +34,13 @@ greater(s(X),s(Y)) :-
 	greater(X,Y).
 
 % lower(X,Y) --> X < Y
-	lower(0,X) :- X\=0.		% min(0,X) = X
-	lower(s(X),s(Y)) :-
-		lower(X,Y).
+lower(0,X) :- X\=0.		% min(0,X) = X
+lower(s(X),s(Y)) :-
+	lower(X,Y).
 
-% TODO: min(X,Y,Z) (so greater and lowe needed)
+% min(X,Y,Z)/3 --> Z = min(X,Y)
+min(_,0,0).		% min(X,0) = 0
+min(X,Y,X) :-
+	lower(X,Y).
+min(X,Y,Y) :-
+	lower(Y,X).

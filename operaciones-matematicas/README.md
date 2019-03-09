@@ -60,3 +60,10 @@ Ejemplos:
 ?- greater(s(0),s(s(0))).   % ¿1 > 2?
 ?- greater(s(0),0).         % ¿1 > 0?
 ```
+
+## Minimo
+min(X,Y,Z)/3 --> Dice si Z es el  min(X,Y)
+```pl
+?- min(s(0),s(s(s(0))),s(0)).   % ¿min(1,3) = 1?
+?- min(s(s(s(0))),s(s(s(0))),0).   % ¿min(3,3) = 0?
+```
