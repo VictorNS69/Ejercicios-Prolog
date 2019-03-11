@@ -48,6 +48,7 @@ Ejemplos:
 ```
 ## Exponencial
 exp(X,Y,Z)/3 --> Dice si Z = X^Y
+
 Ejemplos:
 ```prolog
 ?- exp(s(s(0)),s(s(0)),s(s(s(s(0))))).        % ¿2^2 = 4?
