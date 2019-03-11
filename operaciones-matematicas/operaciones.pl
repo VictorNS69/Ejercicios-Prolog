@@ -3,6 +3,11 @@ nat(0).
 nat(s(X)) :-
 	nat(X).
 
+% even(X)/1 --> X is an even number
+even(0).		% 0 is an even number
+even(s(s(X))) :-	% n is an even number if n-2 is an even number
+	even(X).	
+
 % addition(X,Y,Z)/3 --> Z = X+Y
 addition(0,X,X).  			% 0+X = X
 addition(s(X),Y,Z) :-			% (1+X)+Y = X+(Y+1)
