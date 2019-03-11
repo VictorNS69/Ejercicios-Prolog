@@ -4,7 +4,7 @@ Algunas operaciones matemáticas con números naturales.
 nat(X)/1 --> Dice si X es un natural o no
 
 Ejemplos:
-```pl
+```prolog
 ?- nat(0).		% ¿0 es un número natural?
 ?- nat(s(0)).		% ¿1 (sucesor de 0) es natural?
 ```
@@ -12,7 +12,7 @@ Ejemplos:
 even(X)/1 --> Dice si X es un número par
 
 Ejemplos:
-```pl
+```prolog
 ?- even(s(s(0))).	% ¿2 es un número par?
 ?- even(s(s(s(0)))).	% ¿3 es un número par?
 ?- even(_).		% ¿Existe algún número par?
@@ -21,7 +21,7 @@ Ejemplos:
 addition(X,Y,Z)/3 --> Dice si Z = X + Y
 
 Ejemplos:
-```pl
+```prolog
 ?- addition(0,s(0),s(0)).               % ¿0 + 1 = 1?
 ?- addition(0,s(s(0)),0).               % ¿0 + 2 = 0?
 ?- addition(s(0),s(s(0)),s(s(s(0)))).	% ¿1 + 2 = 3?
@@ -31,7 +31,7 @@ Ejemplos:
 multiply(X,Y,Z) --> Dice si Z = X * Y
 
 Ejemplos:
-```pl
+```prolog
 ?- multiply(0,0,0).                             % ¿0 * 0 = 0?
 ?- multiply(s(s(0)),s(s(0)),s(s(s(s(0))))).     % ¿2 * 2 = 4?
 ?- multiply(s(s(0)),s(s(s(s(0)))),0).           % ¿2 * 4 = 0?
@@ -41,7 +41,7 @@ Ejemplos:
 fact(X,Y)/2 --> Dice si Y = X!
 
 Ejemplos:
-```pl
+```prolog
 ?- fact(s(0),s(0)).         % ¿1! = 1?
 ?- fact(s(0),s(s(s(0)))).   % ¿1! = 3?
 ?- fact(s(s(0)),s(s(0))).   % ¿2! = 2?
@@ -49,7 +49,7 @@ Ejemplos:
 ## Exponencial
 exp(X,Y,Z)/3 --> Dice si Z = X^Y
 Ejemplos:
-```pl
+```prolog
 ?- exp(s(s(0)),s(s(0)),s(s(s(s(0))))).        % ¿2^2 = 4?
 ?- exp(s(s(0)),s(s(0)),s(s(s(s(s(0)))))).     % ¿2^2 = 5?
 ```
@@ -58,7 +58,7 @@ Ejemplos:
 lower(X,Y)/2 --> Dice si X < Y
 
 Ejemplos:
-```pl
+```prolog
 ?- lower(s(0),s(s(0))).     % ¿1 < 2?
 ?- lower(s(0),s(0)).        % ¿1 < 1?
 ```
@@ -66,7 +66,7 @@ Ejemplos:
 greater(X,Y)/2 --> Dice si X > Y
 
 Ejemplos:
-```pl
+```prolog
 ?- greater(s(0),s(s(0))).   % ¿1 > 2?
 ?- greater(s(0),0).         % ¿1 > 0?
 ```
@@ -75,7 +75,7 @@ Ejemplos:
 min(X,Y,Z)/3 --> Dice si Z es el  min(X,Y)
 
 Ejemplos:
-```pl
+```prolog
 ?- min(s(0),s(s(s(0))),s(0)).   % ¿min(1,3) = 1?
 ?- min(s(s(s(0))),s(s(s(0))),0).   % ¿min(3,3) = 0?
 ```
