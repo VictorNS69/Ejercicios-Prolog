@@ -25,13 +25,12 @@ fact(s(X),Y) :-             % (X+1)! = X! * (X+1)
 	fact(X,Z),
 	multiply(s(X),Z,Y).
 
-% TODO: Not working
 % exp(X,Y,Z) --> Z = X^Y
-exp(_,0,s(0)).						% X^0 = 1
-exp(X,Y,Z) :-					% X^(Y+1) = X^(Y)*X
-	exp(X,Y,S),
-	multiply(X,S,Z).
-
+exp(0,0,s(0)).    		% 0^0 = 1
+exp(s(_),0,s(0)).               % X^0 = 1
+exp(X,s(Y),Z) :-                % X^(Y+1) = X^(Y)*X
+        exp(X,Y,S),
+        multiply(X,S,Z).
 
 % greater(X,Y) --> X > Y
 greater(X,0) :- X\=0.		% max(X,0) = X
